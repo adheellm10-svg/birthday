@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Adventure ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         START SCREEN
+    ========================================== -->
+
+    <section id="startScreen" class="screen active">
+
+        <div class="card">
+
+            <div class="logo">
+                🎮
+            </div>
+
+            <h1 class="start-title">
+                THE BIRTHDAY QUEST
+            </h1>
+
+            <p>
+                Someone has created a secret
+                adventure just for you... 👀
+
+                <br><br>
+
+                Complete the challenges
+                to unlock your surprise. ❤️
+            </p>
+
+            <br>
+
+            <button onclick="startGame()">
+                🚀 START ADVENTURE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         HEART GAME
+    ========================================== -->
+
+    <section id="gameScreen" class="screen">
+
+        <div class="game-area">
+
+            <div class="game-header">
+
+                <div class="score">
+
+                    ❤️ Hearts:
+
+                    <span id="score">0</span>
+
+                    /5
+
+                </div>
+
+                <div class="instruction">
+                    Catch 5 hearts to continue! 💕
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         LOCK SCREEN
+    ========================================== -->
+
+    <section id="lockScreen" class="screen">
+
+        <div class="card">
+
+            <div class="lock">
+                🔐
+            </div>
+
+            <h1>
+                SECRET UNLOCKED
+            </h1>
+
+            <p>
+                You found all the hearts! ❤️
+
+                <br><br>
+
+                But there is one final mystery...
+            </p>
+
+            <br>
+
+            <button onclick="showGift()">
+                🔓 Unlock Mystery
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         GIFT SCREEN
+    ========================================== -->
+
+    <section id="giftScreen" class="screen">
+
+        <div class="card">
+
+            <h1>
+                🎁 YOU FOUND A GIFT
+            </h1>
+
+            <p>
+                Something special is waiting
+                inside...
+
+                <br><br>
+
+                Click the gift to open it!
+            </p>
+
+            <br>
+
+            <div id="gift"
+                 class="gift"
+                 onclick="openGift()">
+
+                🎁
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PUZZLE SCREEN
+    ========================================== -->
+
+    <section id="puzzleScreen" class="screen">
+
+        <div class="card">
+
+            <div class="puzzle-icon">
+                🧩
+            </div>
+
+            <h1>
+                ONE LAST PUZZLE
+            </h1>
+
+            <p>
+                Before your surprise is revealed,
+                solve this little mystery.
+            </p>
+
+            <div class="code">
+                2 + 2 = ?
+            </div>
+
+            <div class="hint">
+                Hint: Even birthdays need
+                a little math 😜
+            </div>
+
+            <input
+                id="answer"
+                type="number"
+                placeholder="?">
+
+            <br><br>
+
+            <button onclick="checkAnswer()">
+                🔐 Unlock
+            </button>
+
+            <p id="wrong" class="wrong-message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BIRTHDAY SCREEN
+    ========================================== -->
+
+    <section id="birthdayScreen" class="screen">
+
+        <div class="card birthday-card">
+
+            <div class="cake">
+                🎂
+            </div>
+
+            <h1 class="birthday-title">
+                🎉 BIRTHDAY 🎉
+            </h1>
+
+            <div class="name" id="birthdayName">
+                Samee ❤️
+            </div>
+
+
+            <!-- =====================================
+                 BEFORE BIRTHDAY
+            ====================================== -->
+
+            <div id="advanceWish"
+                 class="advance-wish">
+
+                <div class="advance-title">
+                    🎁 ADVANCE HAPPY BIRTHDAY! 🎁
+                </div>
+
+                <p>
+
+                    Hey SamAdh ❤️
+
+                    <br><br>
+
+                    I know your special day
+                    hasn't arrived yet...
+
+                    <br><br>
+
+                    So for now...
+
+                    <br>
+
+                    🌸 <strong>Advance Happy Birthday!</strong> 🌸
+
+                    <br><br>
+
+                    Your real birthday surprise
+                    is waiting for you. 💌
+
+                </p>
+
+
+                <div class="countdown-title">
+                    ⏳ YOUR REAL SURPRISE OPENS IN
+                </div>
+
+
+                <div class="countdown">
+
+                    <div class="time-box">
+
+                        <span id="days"
+                              class="time-number">
+                            00
+                        </span>
+
+                        <span class="time-label">
+                            DAYS
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="hours"
+                              class="time-number">
+                            00
+                        </span>
+
+                        <span class="time-label">
+                            HOURS
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="minutes"
+                              class="time-number">
+                            00
+                        </span>
+
+                        <span class="time-label">
+                            MINUTES
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="seconds"
+                              class="time-number">
+                            00
+                        </span>
+
+                        <span class="time-label">
+                            SECONDS
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="unlock-date">
+
+                    🔐 The secret message unlocks
+
+                    <br>
+
+                    <strong>
+                        07 October 2026 — 12:00 AM
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 REAL BIRTHDAY MESSAGE
+            ====================================== -->
+
+            <div id="realBirthday"
+                 class="real-birthday">
+
+                <div class="celebration-icons">
+                    🎉💖🎂💖🎉
+                </div>
+
+                <h2>
+                    IT'S YOUR BIRTHDAY! 🥳
+                </h2>
+
+                <p>
+
+                    Happy Birthday, Samee! ❤️
+
+                    <br><br>
+
+                    The wait is finally over...
+
+                    <br>
+
+                    Your secret message
+                    is here. 💌
+
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 SECRET LETTER
+            ====================================== -->
+
+            <div id="letter"
+                 class="letter">
+
+                <h2>
+                    💖 A Hearty Message
+                </h2>
+
+                <p>
+
+                    This is for you....
+
+                    <br><br>
+
+                    ✨I like you so much—I don't even know exactly why,
+                    but I really do; I like you even more than you might imagine.
+                    I want this bond to last forever,
+                    and I am making the effort to ensure that;
+                    I hope for the same effort from you, too.
+                    We’ve had plenty of arguments,
+                    but I’ve never once hated you—in fact, I’ve only grown to like you more.
+                    None of that is a surprise, really,
+                    but every single happy moment with you is a surprise to me.
+                    There aren't many specific things I expect from you,
+                    but there are a few: your notifications, your laughter,
+                    you sharing things with me,
+                    and even those little moments of possessiveness or anger
+                    —these are the things I look forward to.
+                    Anyway, today is your birthday.
+                    Happy birthday to my love
+                    —you are the one person I truly cherish.✨
+
+                    <br><br>
+
+                    I hope this new year of your life
+                    brings you countless reasons
+                    to smile.
+
+                    <br><br>
+
+                    Keep dreaming.
+                    Keep smiling.
+                    Keep shining. 🌟
+
+                    <br><br>
+
+                    🎂 Happy Birthday to My love!!! 🎂
+
+                    <br><br>
+
+                    You deserve an amazing year ahead with me. ❤️😜
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SCROLL BUTTON
+    ========================================== -->
+
+    <button id="scrollButton"
+            class="scroll-btn"
+            onclick="scrollDown()">
+
+        ↓
+
+    </button>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
