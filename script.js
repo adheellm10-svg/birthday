@@ -2,19 +2,19 @@
    SETTINGS
 ========================================= */
 
-const birthdayPerson = "Samee";
+const birthdayPerson = "Shizuka";
 
 
 /*
    EXACT BIRTHDAY UNLOCK TIME
 
-   07 October 2026
+   13 November 2026
    12:00 AM
    India Standard Time
 */
 
 const birthdayDate =
-    "2026-10-07T00:00:00+05:30";
+    "2026-11-13T00:00:00+05:30";
 
 
 /* =========================================
